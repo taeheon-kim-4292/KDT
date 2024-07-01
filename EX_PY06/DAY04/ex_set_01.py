@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Set 자료형 살펴보기
 # - 여러가지 종류의 여러 개 데이터를 저장
 # - 단, 중복 불가!
@@ -39,7 +38,7 @@ print(data)
 
 data=list("GOod")
 print(data)
-=======
+
 # Set 자료형 살펴보기
 # - 여러가지 종류의 여러 개 데이터를 저장
 # - 단, 중복 불가!
@@ -80,4 +79,4 @@ print(data)
 
 data=list("GOod")
 print(data)
->>>>>>> 6b4b6469270e48dca5d2bee00bb2a7a3ede2875e
+
