@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## => 중첩조건문
 ## - 조건문에 조건문이 존재하는 제어문
 ## - 형식
@@ -35,8 +34,6 @@ else:
 city=['대구','부산','울산']
 data='마산'
 
-if data in city:
-=======
 ## => 중첩조건문
 ## - 조건문에 조건문이 존재하는 제어문
 ## - 형식
@@ -52,6 +49,7 @@ if data in city:
 ##  - 숫자>0        (0과 양수 나누기)
 
 num=int(input())
+
 if num>=0:
     print(f'{num}은 음이 아닌 정수')
     if num>0:
@@ -74,5 +72,4 @@ city=['대구','부산','울산']
 data='마산'
 
 if data in city:
->>>>>>> 6b4b6469270e48dca5d2bee00bb2a7a3ede2875e
     print(f'{data}는 광역시입니다.')
