@@ -26,7 +26,7 @@ commute_time_df.columns = ['호선명', '지하철역', '07:00:00~07:59:59_하�
 
 commute_time_df[('07:00:00~07:59:59_하차')] = commute_time_df[('07:00:00~07:59:59_하차')].apply(lambda x:x.replace(',',''))
 commute_time_df[('08:00:00~08:59:59_하차')] = commute_time_df[('08:00:00~08:59:59_하차')].apply(lambda x:x.replace(',',''))
-print(tabulate(commute_time_df.head(40),headers='keys', tablefmt='psql'))
+print(tabulate(commute_time_df.head(20),headers='keys', tablefmt='psql'))
 
 commute_time_df= commute_time_df.astype({('07:00:00~07:59:59_하차'):'int64'})
 commute_time_df= commute_time_df.astype({('08:00:00~08:59:59_하차'):'int64'})
@@ -37,7 +37,7 @@ commute_time_df['하차 인원'] = commute_time_df['07:00:00~07:59:59_하차'] +
 
 # 1호선 최대 하차 인원 찾기
 line_1 = commute_time_df[commute_time_df['호선명'] == '1호선']
-max_index_1 = line_1['하차 인원'].idxmax()
+max_index_1 = line_1['하차 인원'].idxmax()      # index max : 최대값의  index
 max_station_1 = line_1.loc[max_index_1]
 print(f'출근 시간대 1호선 최대 하차역: {max_station_1["지하철역"]}, 하차인원: {max_station_1["하차 인원"]:,}명')
 
@@ -93,3 +93,4 @@ plt.title('출근 시간대 지하철 노선별 최대 하차역')
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.show()
+
